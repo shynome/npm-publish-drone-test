@@ -1,5 +1,5 @@
 pipeline:
   npm_publish:
     image: plugins/npm
+    username: shynome
     email: shynome@gmail.com
-    secrets: [ npm_token ]
