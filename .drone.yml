@@ -8,12 +8,6 @@ pipeline:
   post:
     image: alpine
     when:
-      status: [ success ]
+      status: [ success, failure ]
     commands:
       - echo 6666
-  post:
-    image: alpine
-    when:
-      status: [ failure ]
-    commands:
-      - echo 55555
