@@ -3,3 +3,4 @@ pipeline:
     image: plugins/npm
     username: shynome
     email: shynome@gmail.com
+    secrets: [ NPM_TOKEN ]
