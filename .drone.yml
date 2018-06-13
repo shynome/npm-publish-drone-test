@@ -1,6 +1,21 @@
+matrix:
+  NUM:
+    - 1
+    - 2
+    - 3
+
 pipeline:
-  npm_publish:
-    image: plugins/npm
-    username: shynome
-    email: shynome@gmail.com
-    secrets: [ NPM_TOKEN ]
+  pre_test:
+    image: alpine
+    commands:
+      - echo 6666
+  test:
+    image: alpine
+    environment:
+      num: ${NUM}
+    commands:
+      - echo $num
+  after_test:
+    image: alpine
+    commands:
+      - echo 77777
