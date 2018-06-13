@@ -1,8 +1,5 @@
 pipeline:
-  # npm_publish:
-  #   image: plugins/npm
-  #   email: shynome@gmail.com
-  test:
-    image: alpine
-    commands:
-      - echo $npm_token
+  npm_publish:
+    image: plugins/npm
+    email: shynome@gmail.com
+    secrets: [ npm_token ]
