@@ -1,21 +1,21 @@
-matrix:
-  NUM:
-    - x1
-    - x2
-    - x3
+
 
 pipeline:
-  pre_test:
+  test:
+    image: shynome/alpine-drone-ci
+    environment:
+      num: 44444
+    commands:
+      - exit $(node -pe 'Math.random()<0.5?1:0')
+  post:
     image: alpine
+    when:
+      status: [ success ]
     commands:
       - echo 6666
-  test:
+  post:
     image: alpine
-    environment:
-      num: ${NUM}
+    when:
+      status: [ failure ]
     commands:
-      - echo $num
-  after_test:
-    image: alpine
-    commands:
-      - echo 77777
+      - echo 55555
