@@ -3,8 +3,6 @@
 pipeline:
   test:
     image: shynome/alpine-drone-ci
-    environment:
-      num: 44444
     commands:
       - exit $(node -pe 'Math.random()<0.5?1:0')
   post:
