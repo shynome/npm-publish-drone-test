@@ -11,3 +11,4 @@ pipeline:
       status: [ success, failure ]
     commands:
       - echo 6666
+      - exit 1
