@@ -2,9 +2,9 @@
 
 pipeline:
   npm_publish:
-    image: alpine
+    image: x
     username: shynome
     email: shynome@gmail.com
-    commands:
-      - echo $PLUGIN_USERNAME
-      - echo $PLUGIN_EMAIL
+    # commands:
+    #   - echo $PLUGIN_USERNAME
+    #   - echo $PLUGIN_EMAIL
