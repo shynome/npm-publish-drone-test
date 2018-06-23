@@ -1,5 +1,8 @@
 pipeline:
   npm_publish:
-    image: plugins/npm
+    image: alpine
     username: shynome
     email: shynome@gmail.com
+    commands:
+      - echo $PLUGIN_USERNAME
+      - echo $PLUGIN_EMAIL
