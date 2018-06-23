@@ -4,7 +4,7 @@ pipeline:
   npm_publish:
     image: x
     username: shynome
-    email: $${PLUGIN_USERNAME}
+    email: $PLUGIN_USERNAME
     # commands:
     #   - echo $PLUGIN_USERNAME
     #   - echo $PLUGIN_EMAIL
