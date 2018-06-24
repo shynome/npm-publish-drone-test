@@ -7,3 +7,4 @@ pipeline:
     commands:
       - echo $PLUGIN_USERNAME
       - echo $email
+
