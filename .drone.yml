@@ -2,7 +2,6 @@
 pipeline:
   npm_publish:
     image: x
-    username: shynome
     environment:
       email: ${DRONE_COMMIT_SHA}
     commands:
