@@ -1,11 +1,9 @@
-include:
-  branch: [ dev ]
 
 pipeline:
   npm_publish:
     image: x
     username: shynome
-    email: $PLUGIN_USERNAME
+    email: ${DRONE_COMMIT_SHA}
     # commands:
     #   - echo $PLUGIN_USERNAME
     #   - echo $PLUGIN_EMAIL
