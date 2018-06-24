@@ -3,7 +3,7 @@ pipeline:
   npm_publish:
     image: x
     environment:
-      email: ${DRONE_COMMIT_SHA}
+      email: "${DRONE_COMMIT_SHA},latest"
     commands:
       - echo $PLUGIN_USERNAME
       - echo $email
