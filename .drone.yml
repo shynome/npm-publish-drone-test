@@ -2,4 +2,4 @@
 pipeline:
   npm_publish:
     image: shynome/alpine-drone-ci:dev
-    deploy: run echo 77
+    deploy: run 'echo 77'
